@@ -170,3 +170,95 @@ img {
   flex: 1 1 175px;
   margin: 10px;
 }
+
+.preco {
+  background: #f7f7f7;
+  padding: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.preco_item {
+  flex: 1 1 300px;
+  border: 4px solid #fff;
+  padding: 20px;
+  margin: 10px 20px;
+  /* min-width: 300px; Esse valor funciona também no flex-basis*/
+}
+
+.preco_item h2,
+.preco_item span {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.preco_item h2 {
+  color: #7c7c7c;
+  text-align: center;
+}
+
+.preco_item span{
+    display: block;
+    max-width: 300px;
+    margin: 20px auto;
+    text-align: center;
+    padding: 10px 0 5px 0;
+    border-top: 4px solid #fff;
+    border-bottom: 4px solid #fff;
+}
+
+.preco_item sup {
+  font-size: 1.5rem;
+}
+
+.preco_item ul{
+    max-width: 300px;
+    margin: 20px auto;
+    font-size: 1.25rem;
+    line-height: 1;
+    font-style: italic;
+    color: #7c7c7c;
+}
+
+.preco_item li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.preco_item li::after{
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: #2c70ff;
+    border-radius: 50%;
+}
+
+.preco a{
+    max-width: 300px;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #222;
+    border: 4px solid;
+    padding: 15px 0;
+}
+
+@media(max-width:750px){
+    .preco{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+     .preco_item:nth-child(3){ 
+        order: -2;
+    } 
+     .preco_item:nth-child(2){ 
+        order: -1;
+    } 
+ }
